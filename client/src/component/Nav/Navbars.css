@@ -30,14 +30,14 @@
 }
 
 #btnbtn{
-   margin-top: -9px;
+   margin-top: -1px;
    color: white;
    font-size: 12px;
 }
 .btn-wraper{
     /* margin-left: 25px; */
     height: 35px;
-    margin-top: 5px;
+    margin-top: 15px;
     width: 200px;
 }
 .btn-wraper:hover{

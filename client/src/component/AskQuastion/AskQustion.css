@@ -11,6 +11,18 @@
     margin-bottom: 20px;
     
 }
+.aske_btn
+{
+    background-color: blue;
+        text-decoration: none;
+        color: rgb(247, 245, 245);
+        text-align: center;
+       max-width: 15%;
+        margin-left: 40px;
+}
+.aske_buton:hover{
+    color: black;
+}
 .error {
   padding: 10px;
   background: #ffefef;

@@ -38,15 +38,14 @@ function Navbars() {
               <Nav.Link href="#pricing" className="links-wraper">
                 How It Work
               </Nav.Link>
-              <Button variant="primary" className="btn-wraper">
-                <a
-                  className="btn btn-blue "
-                  id="btnbtn"
-                  href="#"
-                  onClick={handleClick}
-                >
-                  {!user ? "SIGN IN " : " Logout"}
-                </a>
+              <Button
+                variant="btn btn-secondary"
+                className="btn-wraper btn"
+                id="btnbtn"
+                href="#"
+                onClick={handleClick}
+              >
+                {!user ? "SIGN IN " : " Logout"}
               </Button>
             </Nav>
           </Navbar.Collapse>

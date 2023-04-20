@@ -127,7 +127,7 @@ function Login() {
         <p>
           <div className="creat-link" onClick={toCreateAccount}>
             {" "}
-            <a href="#">Arady Have account?</a>
+            <a href="#">Alrady Have account?</a>
           </div>
         </p>
       </div>

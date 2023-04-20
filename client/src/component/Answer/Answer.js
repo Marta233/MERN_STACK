@@ -2,7 +2,7 @@ import "./Answer.css";
 import Form from "react-bootstrap/Form";
 import prof from "../imgs.png";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useQuastionContext } from "../../Hook/usequastioncontext";
 import { useUserContext } from "../../Hook/useUserContext";
 
@@ -74,6 +74,11 @@ function Answer() {
 
   return (
     <div className="main">
+      <div>
+        <Link to={"/ListQuastion"} className="ask_buton">
+          Back
+        </Link>
+      </div>
       <div className="usersprof_wrapper">
         <div className="Quastions">
           <h4>Quastion</h4>

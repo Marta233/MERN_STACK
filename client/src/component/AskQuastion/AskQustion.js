@@ -3,6 +3,7 @@ import "./AskQustion.css";
 import Form from "react-bootstrap/Form";
 import { useUserContext } from "../../Hook/useUserContext";
 import { useQuastionContext } from "../../Hook/usequastioncontext";
+import { Link } from "react-router-dom";
 
 function AskQustion() {
   const { user } = useUserContext();
@@ -54,6 +55,11 @@ function AskQustion() {
 
   return (
     <div className="main">
+      <div>
+        <Link to={"/ListQuastion"} className="aske_btn">
+          Back
+        </Link>
+      </div>
       <div className="instraction">
         <h5>Steps To Write A Good Quastion</h5>
         <ul>
