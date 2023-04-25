@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { useUserContext } from "./useUserContext";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 export const useSignup = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(null);
   const { dispatch } = useUserContext();
+  const navigate = useNavigate();
 
   const signup = async (email, password, FirstName, LastName, UserName) => {
     setIsLoading(true);
     setError(null);
-    const response = await fetch("http://localhost:4000/api/user/signup", {
+    const response = await fetch("http://localhost:4000/api/user/Signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password, FirstName, LastName, UserName }),
@@ -24,7 +27,8 @@ export const useSignup = () => {
 
       // update the usercontext
       dispatch({ type: "LOGIN", payload: json });
-      setIsLoading(true);
+      setIsLoading(false);
+      navigate("/ListQuastion");
     }
   };
   return { signup, isLoading, error };

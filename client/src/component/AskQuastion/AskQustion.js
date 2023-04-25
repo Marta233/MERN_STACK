@@ -56,7 +56,7 @@ function AskQustion() {
   return (
     <div className="main">
       <div>
-        <Link to={"/ListQuastion"} className="aske_btn">
+        <Link to={"/ListQuastion"} className="aske_btn1">
           Back
         </Link>
       </div>

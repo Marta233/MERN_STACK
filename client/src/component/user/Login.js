@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useSignup } from "../../Hook/Signup";
 import { useLogin } from "../../Hook/uselogin";
 import { useNavigate } from "react-router-dom";
+
 import { useUserContext } from "../../Hook/useUserContext";
 const toLoginPage = (e) => {
   var element = document.getElementById("login");
@@ -38,13 +39,14 @@ function Login() {
     e.preventDefault();
     // console.log(email, password, firstName, latsName, userName);
     await signup(email, password, FirstName, LastName, UserName);
-    navigate("/ListQuastion");
+    await login(email, password);
+    // navigate("/ListQuastion");
   };
   const handleSubmitlogin = async (e) => {
     e.preventDefault();
     await login(email, password);
     // console.log(email, password);
-    navigate("/ListQuastion");
+
     // console.log(user.UserName);
   };
 
@@ -126,7 +128,6 @@ function Login() {
         {error && <p className="error">{error}</p>}
         <p>
           <div className="creat-link" onClick={toCreateAccount}>
-            {" "}
             <a href="#">Alrady Have account?</a>
           </div>
         </p>
@@ -176,7 +177,7 @@ function Login() {
             </button>
           </div>
         </form>
-        {error && <p className="errror">{errorlogin}</p>}
+        {errorlogin && <p className="error">{errorlogin}</p>}
         <p>
           <a className="creat-link" href="#" onClick={toLoginPage}>
             Creat an account?
