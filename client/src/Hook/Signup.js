@@ -2,10 +2,12 @@ import { useState } from "react";
 import { useUserContext } from "./useUserContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useLogin } from "./uselogin";
 export const useSignup = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(null);
   const { dispatch } = useUserContext();
+  const { login, errorlogin, isLoadinglogin } = useLogin();
   const navigate = useNavigate();
 
   const signup = async (email, password, FirstName, LastName, UserName) => {
@@ -28,6 +30,7 @@ export const useSignup = () => {
       // update the usercontext
       dispatch({ type: "LOGIN", payload: json });
       setIsLoading(false);
+      await login(email, password);
       navigate("/ListQuastion");
     }
   };

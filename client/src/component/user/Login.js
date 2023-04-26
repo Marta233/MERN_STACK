@@ -29,7 +29,7 @@ function Login() {
   const [FirstName, setfirstName] = useState("");
   const [LastName, setlastName] = useState("");
   const [UserName, setuserName] = useState("");
-  const [passwordShown, setPasswordShown] = useState(false);
+  const [passwordShown, setPasswordShown] = useState(true);
   const togglePassword = () => {
     // When the handler is invoked
     // inverse the boolean state of passwordShown
@@ -39,7 +39,7 @@ function Login() {
     e.preventDefault();
     // console.log(email, password, firstName, latsName, userName);
     await signup(email, password, FirstName, LastName, UserName);
-    await login(email, password);
+
     // navigate("/ListQuastion");
   };
   const handleSubmitlogin = async (e) => {
@@ -107,7 +107,6 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
               value={password}
             />
-
             <i
               className={passwordShown ? " fa fa-eye " : "fa fa-eye-slash"}
               aria-hidden="true"

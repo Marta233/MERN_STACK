@@ -21,11 +21,11 @@ input:focus {
     border-bottom: 2px solid orange;
 }
 
-/* #togglePassword {
+#togglePassword {
     margin-left: -20px;
     cursor: pointer;
     color: black;
-} */
+}
 
 .describtion p {
     display: flex;
