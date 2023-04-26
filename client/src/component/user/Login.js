@@ -29,7 +29,7 @@ function Login() {
   const [FirstName, setfirstName] = useState("");
   const [LastName, setlastName] = useState("");
   const [UserName, setuserName] = useState("");
-  const [passwordShown, setPasswordShown] = useState(true);
+  const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {
     // When the handler is invoked
     // inverse the boolean state of passwordShown
