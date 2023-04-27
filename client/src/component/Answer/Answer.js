@@ -20,7 +20,10 @@ function Answer() {
   useEffect(() => {
     const fetchWorkouts = async () => {
       const questionAsk = await fetch(
-        `http://localhost:4000/api/quastion/${id}`
+        `http://localhost:4000/api/quastion/${id}`,
+        {
+          headers: { Authorization: `Bearer ${user.token}` },
+        }
       );
       const json = await questionAsk.json();
       console.log(json);
@@ -30,6 +33,7 @@ function Answer() {
     };
     fetchWorkouts();
   }, []);
+  console.log(question);
   useEffect(() => {
     const getData = async () => {
       const questionRes = await fetch(`http://localhost:4000/api/answer/${id}`);
