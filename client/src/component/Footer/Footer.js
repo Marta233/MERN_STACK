@@ -53,7 +53,7 @@ function Footer() {
         <ul>
           <li>Evangadi Networks</li>
           <li>Support@evangadi.com</li>
-          <li>Group 2</li>
+          <li>Support@gmail</li>
         </ul>
       </div>
     </div>
